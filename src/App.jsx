@@ -71,6 +71,7 @@ export default function App() {
             <div className="mt-6">
               <button className="button w-full" onClick={resetApp}>
                 Recommencer
+                Recommencer
               </button>
             </div>
           </>
