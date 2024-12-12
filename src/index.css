@@ -17,3 +17,24 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+@font-face {
+  font-family: "Helvetica 73 Bold Extended";
+  src: url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.eot");
+  src: url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b71c831cd232effde30ce1bec5e171d5.svg#Helvetica 73 Bold Extended")format("svg");
+}
+
+@theme {
+  --color-background: #FEB734;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica 73 Bold Extended', sans-serif;
+  box-sizing: border-box;
+}

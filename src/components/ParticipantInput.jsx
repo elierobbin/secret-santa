@@ -37,7 +37,7 @@ export function ParticipantInput({
             <div className="space-x-2">
               <button
                 className="text-red-500 hover:text-red-700"
-                onClick={() => onRemoveParticipant(index)}
+                onClick={() => onRexmoveParticipant(index)}
               >
                 Supprimer
               </button>

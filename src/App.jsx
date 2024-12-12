@@ -39,7 +39,7 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="w-screen h-screen bg-background">
       <div className="card">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
@@ -70,7 +70,6 @@ export default function App() {
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
               <button className="button w-full" onClick={resetApp}>
-                Recommencer
                 Recommencer
               </button>
             </div>
