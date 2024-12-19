@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { ParticipantInput } from "./components/ParticipantInput";
 import { AssignmentDisplay } from "./components/AssignmentDisplay";
+import Button from "./components/Button";
 
 export default function App() {
   const [participants, setParticipants] = useState([]);
@@ -63,8 +64,8 @@ export default function App() {
   };
 
   return (
-    <div className="w-screen h-screen pt-8 bg-background">
-      <div className="card">
+    <div className="w-screen h-screen pt-8 px-4 bg-background">
+      <div className="flex flex-col items-center justify-between h-full">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
@@ -75,9 +76,7 @@ export default function App() {
               participants={participants}
               onRemoveParticipant={removeParticipant}
             />
-            <button className="button py-2 px-4 text-base bg-text-button text-bg-button rounded-lg" onClick={distributeGifts}>
-              Distribuer les cadeaux
-            </button>
+            <Button onClick={distributeGifts} label="Distribuer les cadeaux" />
           </>
         )}
         {currentScreen === "assignments" && (
@@ -87,9 +86,7 @@ export default function App() {
             </h2>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
-              <button className="button px-6 py-2 text-base bg-bg-button text-text-button hover:text-bg-button hover:bg-text-button cursor-pointer rounded-lg transition-all duration-300" onClick={resetApp}>
-                Recommencer
-              </button>
+              <Button onClick={resetApp} label="Recommencer" />
             </div>
           </>
         )}

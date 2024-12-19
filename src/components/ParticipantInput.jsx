@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TrashIcon, UserCircleIcon } from "@heroicons/react/outline";
 import "../snowflakes.css";
+import Button from "./Button";
 
 export function ParticipantInput({
   onAddParticipant,
@@ -29,7 +30,7 @@ export function ParticipantInput({
           🎄 Ajoutez les participants 🎅
         </h2>
 
-        <div className="flex w-full gap-4 items-center">
+        <div className="flex w-full px-4 gap-4 items-center">
           <input
             type="text"
             className="w-full p-3 rounded-lg text-gray-800 bg-white border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-gray-500 transition-all"
@@ -39,13 +40,13 @@ export function ParticipantInput({
             onKeyDown={handleKeyPress}
             aria-label="Entrez un nom"
           />
-          <button
-            className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-green-500 hover:shadow-lg transition-all"
-            onClick={addParticipant}
-            aria-label="Ajouter un participant"
-          >
-            Ajouter
-          </button>
+            <button
+              className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-green-500 hover:shadow-lg transition-all"
+              onClick={addParticipant}
+              aria-label="Ajouter un participant"
+            >
+              Ajouter
+            </button>
         </div>
 
         <ul className="flex flex-col w-full gap-4">

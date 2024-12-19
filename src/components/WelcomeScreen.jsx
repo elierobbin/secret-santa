@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Button from "./Button";
 
 export function WelcomeScreen({ onStart }) {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -10,12 +11,12 @@ export function WelcomeScreen({ onStart }) {
   return (
     <div className="flex flex-col gap-4 px-4 w-screen h-screen text-center items-center relative overflow-hidden">
       <img
-        className={`absolute w-[85%] sm:w-1/3 transition-transform duration-1000 z-10 ${
+        className={`absolute w-[85%] sm:w-1/3 transition-transform duration-500 z-10 ${
           isAnimating ? "translate-y-full" : "translate-y-0"
         }`}
         src="pere-noel.svg"
         alt="Père Noël"
-        style={{ bottom: "0" }}
+        style={{ bottom: "-100px" }}
       />
       <h1
         className={`font-sans transition-transform duration-1000 ${
@@ -35,12 +36,7 @@ export function WelcomeScreen({ onStart }) {
           Bienvenue dans l'application Secret Santa ! Organisez facilement votre
           échange de cadeaux entre amis ou collègues.
         </p>
-        <button
-          onClick={onStart}
-          className="button px-6 py-2 text-base bg-bg-button text-text-button hover:text-bg-button hover:bg-text-button cursor-pointer rounded-lg transition-all duration-300"
-        >
-          Commencer
-        </button>
+        <button className="px-6 py-2 mb-4 text-base bg-bg-button text-text-button hover:text-bg-button hover:bg-text-button cursor-pointer rounded-lg transition-all duration-300" onClick={onStart}>Commencer</button>
       </section>
     </div>
   );
