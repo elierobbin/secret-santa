@@ -63,7 +63,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-screen h-screen bg-background">
+    <div className="w-screen h-screen pt-8 bg-background">
       <div className="card">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
